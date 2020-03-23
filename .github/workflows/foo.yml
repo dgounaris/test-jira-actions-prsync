@@ -45,6 +45,6 @@ jobs:
         # Type of the issue to be created. Example: 'Incident'
         issuetype: Story
         # Issue summary
-        summary: {{ github.event.issue.title }}
+        summary: ${{ github.event.issue.title }}
         # Issue description
         description: Created by github action
