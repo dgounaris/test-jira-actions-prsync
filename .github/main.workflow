@@ -11,5 +11,5 @@ action "Create Jira Issue" {
 
 action "Jira Login" {
   uses = "atlassian/gajira-login@v1.0.0"
-  secrets = ["JIRA_API_TOKEN=yNcMqAMZZV3VXdGhOfukFDEE", "JIRA_BASE_URL=https://dgoun.atlassian.net", "JIRA_USER_EMAIL=dgoungr@hotmail.com"]
+  secrets = ["JIRA_API_TOKEN", "yNcMqAMZZV3VXdGhOfukFDEE", "JIRA_BASE_URL", "https://dgoun.atlassian.net", "JIRA_USER_EMAIL", "dgoungr@hotmail.com"]
 }
