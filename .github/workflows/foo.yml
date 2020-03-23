@@ -33,9 +33,9 @@ jobs:
     - name: Jira Login
       uses: atlassian/gajira-login@v2.0.0
       env:
-        JIRA_BASE_URL: https://dgoun.atlassian.net
-        JIRA_USER_EMAIL: dgoungr@hotmail.com
-        JIRA_API_TOKEN: yNcMqAMZZV3VXdGhOfukFDEE
+        JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
+        JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
+        JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
         
     - name: Jira Create issue
       uses: atlassian/gajira-create@v2.0.0
