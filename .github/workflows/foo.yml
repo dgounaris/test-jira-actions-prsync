@@ -47,4 +47,4 @@ jobs:
         # Issue summary
         summary: ${{ github.event.issue.title }}
         # Issue description
-        description: Created by github action
+        description: ${{ github.event.issue.body }}\n\n_Created by github action_
