@@ -46,6 +46,7 @@ jobs:
         issuetype: Story
         # Issue summary
         summary: ${{ github.event.issue.title }}
+        labels: community
         # Issue description
         description: |
           ${{ github.event.issue.body }}
