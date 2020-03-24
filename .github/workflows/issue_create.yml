@@ -53,21 +53,14 @@ jobs:
           
           Created by github action.
           
-    - name: Send mail
-      uses: dawidd6/action-send-mail@master
+    - name: Send some mail
+      uses: wadeww/send-email-action@master
       with:
-        server_address: smtp.office365.com
-        server_port: 587
-        username: ${{ secrets.MAIL_USERNAME }}
-        password: ${{ secrets.MAIL_PASSWORD }}
-        subject: Github Actions job result
-        # Literal body:
-        body: |
-          Created new issue 
-          ${{ steps.create.outputs.issue.title }}
-          
-          ${{ steps.create.outputs.issue.summary }}
+        server_address: smtp.gmail.com
+        port: 465
+        username: ${{secrets.MAIL_USERNAME}}
+        password: ${{secrets.MAIL_PASSWORD}}
+        subject: Workflow finished
+        body: Job completed ${{job.status}}
         to: dimitris.gounaris@r3.com
-        from: DG
-        # Optional content type (defaults to text/plain):
-        content_type: text/html
+        from: Me
