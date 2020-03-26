@@ -28,6 +28,7 @@ jobs:
     - name: Get issue comments
       uses: dgounaris/git-jira-action@master
       with:
+        token: ${{ secrets.GTOKEN }}
         owner: dgounaris
         repository: test-jira-actions
         issue: 26
