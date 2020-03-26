@@ -18,8 +18,17 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     
+    - name: Jira Login
+      uses: atlassian/gajira-login@v2.0.0
+      env:
+        JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
+        JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
+        JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+    
     - name: Get issue comments
       uses: dgounaris/git-jira-action@master
       with:
         owner: dgounaris
         repository: test-jira-actions
+        issue: 26
+
