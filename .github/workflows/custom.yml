@@ -31,5 +31,4 @@ jobs:
         token: ${{ secrets.GTOKEN }}
         owner: dgounaris
         repository: test-jira-actions
-        issue: 26
 
