@@ -39,7 +39,7 @@ jobs:
         
     - name: Jira Create issue
       id: create
-      uses: atlassian/gajira-create@v2.0.0
+      uses: dgounaris/gajira-create@master
       with:
         # Key of the project
         project: DPG
@@ -47,6 +47,7 @@ jobs:
         issuetype: Bug
         # Issue summary
         summary: ${{ github.event.issue.title }}
+        label: community
         # Issue description
         description: |
           ${{ github.event.issue.body }}
