@@ -47,7 +47,7 @@ jobs:
         issuetype: Bug
         # Issue summary
         summary: ${{ github.event.issue.title }}
-        label: community
+        labels: community,bug
         # Issue description
         description: |
           ${{ github.event.issue.body }}
