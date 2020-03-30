@@ -41,13 +41,16 @@ jobs:
       id: create
       uses: dgounaris/gajira-create@master
       with:
+        jiraBaseUrl: ${{ secrets.JIRA_BASE_URL }}
         # Key of the project
         project: DPG
         # Type of the issue to be created. Example: 'Incident'
         issuetype: Bug
         # Issue summary
         summary: ${{ github.event.issue.title }}
-        labels: community,bug
+        label: community
+        jiraEmail: ${{ secrets.JIRA_USER_EMAIL }}
+        jiraToken: ${{ secrets.JIRA_API_TOKEN }}
         # Issue description
         description: |
           ${{ github.event.issue.body }}
