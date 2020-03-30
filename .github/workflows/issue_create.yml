@@ -31,7 +31,7 @@ jobs:
         issuetype: Bug
         # Issue summary
         summary: ${{ github.event.issue.title }}
-        label: community,bug
+        labels: community,bug
         jiraEmail: ${{ secrets.JIRA_USER_EMAIL }}
         jiraToken: ${{ secrets.JIRA_API_TOKEN }}
         # Issue description
