@@ -22,7 +22,7 @@ jobs:
         
     - name: Jira Create issue
       id: create
-      uses: dgounaris/gajira-create@master
+      uses: dgounaris/git-jira-create-action@master
       with:
         jiraBaseUrl: ${{ secrets.JIRA_BASE_URL }}
         # Key of the project
