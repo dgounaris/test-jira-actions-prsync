@@ -62,3 +62,22 @@ jobs:
         body: |
           Automatically created Jira issue: ${{ steps.create.outputs.issue }}
         reaction-type: '+1'
+        
+    - name: Send mail
+      uses: dawidd6/action-send-mail@master
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: ${{ secrets.DG_MAIL_USER }}
+        password: ${{ secrets.DG_MAIL_PASS }}
+        subject: Github Actions job result
+        # Literal body:
+        body: |
+          Created new issue 
+          ${{ steps.create.outputs.issue.title }}
+
+          ${{ steps.create.outputs.issue.summary }}
+        to: dgoungr@hotmail.com
+        from: DG
+        # Optional content type (defaults to text/plain):
+        content_type: text/html
