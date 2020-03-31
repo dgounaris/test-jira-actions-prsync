@@ -46,7 +46,7 @@ jobs:
         token: ${{ secrets.GTOKEN }}
         issue-number: ${{ github.event.issue.number }}
         body: |
-          Automatically created Jira issue: ${{ steps.create.outputs }}
+          Automatically created Jira issue: ${{ steps.create.outputs.data.key }}
         reaction-type: '+1'
         
     - name: Send mail
