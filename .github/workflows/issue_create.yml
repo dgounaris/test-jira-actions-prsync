@@ -46,5 +46,5 @@ jobs:
         token: ${{ secrets.GTOKEN }}
         issue-number: ${{ github.event.issue.number }}
         body: |
-          Automatically created Jira issue: ${{ steps.create.outputs.issue.issue }}
+          Automatically created Jira issue: ${{ steps.create.outputs.issue }}
         reaction-type: '+1'
