@@ -27,4 +27,4 @@ jobs:
           git checkout -b sync-2020-04-06
           git remote add open https://github.com/dgounaris/test-jira-actions.git
           git fetch open master
-          git push --set-upstream origin/sync-2020-04-06
+          git push --set-upstream origin sync-2020-04-06
