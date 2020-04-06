@@ -15,3 +15,13 @@ jobs:
           curl -X POST https://api.github.com/repos/dgounaris/test-jira-actions/dispatches \
           -u ${{ secrets.GTOKEN }} \
           --data '{"event_type": "pong", "client_payload": { }}'
+
+      - name: Checkout latest master
+        uses: actions/checkout@v2
+        with:
+          ref: master # this would be coming from the received event in cases like corda with many versions
+      
+      - name: Fetch, open branch, merge and open pr
+        run: |
+          git remote add open https://github.com/corda/corda.git \
+          git fetch open master
