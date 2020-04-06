@@ -13,4 +13,5 @@ jobs:
         if: github.event.action == 'ping'
         run: |
           curl -X POST https://api.github.com/repos/dgounaris/test-jira-actions/dispatches \
+          -u ${{ secrets.GTOKEN }} \
           --data '{"event_type": "pong", "client_payload": { }}'
