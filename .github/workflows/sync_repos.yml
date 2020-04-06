@@ -23,5 +23,5 @@ jobs:
       
       - name: Fetch, open branch, merge and open pr
         run: |
-          git remote add open https://github.com/corda/corda.git \
+          git remote add open https://github.com/dgounaris/test-jira-actions.git
           git fetch open master
